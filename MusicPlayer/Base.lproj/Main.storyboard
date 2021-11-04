@@ -16,25 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lts-7i-uNA">
-                                <rect key="frame" x="66" y="157" width="282" height="221"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lts-7i-uNA">
+                                <rect key="frame" x="107" y="94" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="K53-gx-uRy"/>
+                                    <constraint firstAttribute="height" constant="200" id="KJj-iv-Rhi"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="button_play"/>
                                 <state key="selected" image="button_pause"/>
                                 <connections>
                                     <action selector="touchUpPlayPauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S2H-6z-dln"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlk-aW-plt">
-                                <rect key="frame" x="167" y="386" width="81" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlk-aW-plt">
+                                <rect key="frame" x="175" y="314" width="64" height="17"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UFK-zj-ycW">
-                                <rect key="frame" x="43" y="404" width="327" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UFK-zj-ycW">
+                                <rect key="frame" x="14" y="347" width="386" height="31"/>
                                 <color key="minimumTrackTintColor" systemColor="systemPinkColor"/>
                                 <connections>
                                     <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="bVg-9B-2mY"/>
@@ -43,6 +44,15 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tlk-aW-plt" firstAttribute="top" secondItem="lts-7i-uNA" secondAttribute="bottom" constant="20" id="F3p-OQ-tkE"/>
+                            <constraint firstItem="lts-7i-uNA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="HtH-jF-OEe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UFK-zj-ycW" secondAttribute="trailing" constant="16" id="SNx-5h-SOU"/>
+                            <constraint firstItem="lts-7i-uNA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vyd-tf-lpG"/>
+                            <constraint firstItem="tlk-aW-plt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XoK-TZ-f69"/>
+                            <constraint firstItem="UFK-zj-ycW" firstAttribute="top" secondItem="tlk-aW-plt" secondAttribute="bottom" constant="16" id="Yir-bM-2vy"/>
+                            <constraint firstItem="UFK-zj-ycW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jbf-Sg-3Yt"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="playPauseButton" destination="lts-7i-uNA" id="lnE-0i-2ZE"/>
